@@ -1,4 +1,4 @@
-# PEFT-TRL-LMs
+# PEFT-TRL-LLMs
 Adaptation of a LLM with Reinforcement Learning from Human Feedback (RLHF) using Parameter-Efficient Fine-Tuning (PEFT) methods on an Anthropic dataset.
 
 ## Resources
