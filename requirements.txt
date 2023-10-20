@@ -1,5 +1,17 @@
-trl
-peft
-datasets
-torch
-transformers
+torch 
+datasets 
+transformers 
+trl 
+tyro 
+tqdm 
+accelerate 
+peft 
+dataclasses 
+colorama 
+wandb
+
+# trl
+# peft
+# datasets
+# torch
+# transformers
