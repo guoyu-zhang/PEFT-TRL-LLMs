@@ -24,6 +24,6 @@ module load python/3.4.3
 source /exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/bin/activate
 
 # Run the program
-python ~/git/PEFT-TRL-LLMs/python_files/reward_model.py
+python ~/git/PEFT-TRL-LLMs/python_files/example_rm.py
 
 deactivate
