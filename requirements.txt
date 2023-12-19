@@ -9,6 +9,7 @@ peft
 dataclasses 
 colorama 
 wandb
+tensorboardX
 
 # trl
 # peft

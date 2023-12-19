@@ -14,12 +14,19 @@ from transformers import AutoTokenizer, pipeline, Trainer, TrainingArguments, Au
 from trl import AutoModelForCausalLMWithValueHead, AutoModelForSeq2SeqLMWithValueHead, PPOConfig, PPOTrainer, set_seed, RewardTrainer
 from trl.core import LengthSampler
 
+from huggingface_hub import login
+
+access_token_read = "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"
+access_token_write = "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"
+login(token = access_token_read)
+
+wandb.login(key="8c53566517fe295a4c6e0d7814014d55874a6155")
 wandb.init()
 
 
 config = PPOConfig(
-    # model_name="meta-llama/Llama-2-7b",
-    model_name="bert-base-uncased",
+    model_name="meta-llama/Llama-2-7b-chat-hf",
+    # model_name="bert-base-uncased",
     learning_rate=1.41e-5,
     log_with="wandb",
 )
@@ -52,33 +59,4 @@ def format_func(row):
   }
   
 formatted_dataset = dataset.map(format_func)
-
-### Loading the TRL reward trainer and training the trainer
-training_args = TrainingArguments(
-        output_dir="rm_checkpoint/",
-        num_train_epochs=1,
-        logging_steps=10,
-        gradient_accumulation_steps=1,
-        save_strategy="steps",
-        evaluation_strategy="steps",
-        per_device_train_batch_size=2,
-        per_device_eval_batch_size=1,
-        eval_accumulation_steps=1,
-        eval_steps=500,
-        save_steps=500,
-        warmup_steps=100,
-        logging_dir="./logs",
-        learning_rate=1e-5,
-        save_total_limit=1,
-        no_cuda=True
-    )
-
-trainer = RewardTrainer(model=model,
-                        tokenizer=tokenizer,
-                        train_dataset=formatted_dataset['train'],
-                        eval_dataset=formatted_dataset['test'],
-                        args=training_args
-                        )
-trainer.train()
-
-trainer.save_model("rm_model/")
+print(formatted_dataset)

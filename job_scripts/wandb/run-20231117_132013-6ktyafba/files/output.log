@@ -1,0 +1,311 @@
+
+
+  0%|          | 0/500 [00:00<?, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+
+
+
+
+
+
+
+
+
+  2%|▏         | 10/500 [00:41<22:59,  2.82s/it]
+
+
+
+
+
+
+
+
+
+  4%|▍         | 19/500 [01:05<21:24,  2.67s/it]
+
+
+
+
+
+
+
+
+
+
+
+  6%|▌         | 30/500 [01:34<20:56,  2.67s/it]
+
+
+
+
+
+
+
+
+
+  8%|▊         | 39/500 [01:59<20:33,  2.68s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 10%|█         | 50/500 [02:28<20:00,  2.67s/it]
+
+
+
+
+
+
+
+
+
+
+ 12%|█▏        | 60/500 [02:55<19:31,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 14%|█▍        | 70/500 [03:22<19:05,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 16%|█▌        | 80/500 [03:49<18:38,  2.66s/it]
+
+
+
+
+
+
+
+
+
+ 18%|█▊        | 89/500 [04:13<18:13,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 20%|██        | 100/500 [04:43<17:44,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 22%|██▏       | 110/500 [05:09<17:18,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 24%|██▍       | 120/500 [05:36<16:53,  2.67s/it]
+
+
+
+
+
+
+
+
+
+ 26%|██▌       | 129/500 [06:03<19:52,  3.21s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 28%|██▊       | 140/500 [06:33<16:02,  2.67s/it]
+
+
+
+
+
+
+
+
+
+
+ 30%|███       | 150/500 [06:59<15:31,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 32%|███▏      | 160/500 [07:26<15:04,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 34%|███▍      | 170/500 [07:53<14:38,  2.66s/it]
+
+
+
+
+
+
+
+
+
+ 36%|███▌      | 179/500 [08:17<14:15,  2.67s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 38%|███▊      | 190/500 [08:47<13:45,  2.66s/it]
+
+
+
+
+
+
+
+
+
+ 40%|███▉      | 199/500 [09:11<13:22,  2.67s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 42%|████▏     | 210/500 [09:40<12:52,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 44%|████▍     | 220/500 [10:07<12:25,  2.66s/it]
+
+
+
+
+
+
+
+
+
+ 46%|████▌     | 229/500 [10:32<12:02,  2.67s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 48%|████▊     | 240/500 [11:01<11:32,  2.66s/it]
+
+
+
+
+
+
+
+
+
+ 50%|████▉     | 249/500 [11:25<11:08,  2.66s/it]
+
+
+
+
+
+
+
+
+
+
+ 52%|█████▏    | 260/500 [11:57<11:22,  2.84s/it]Traceback (most recent call last):
+  File "/home/s1808795/git/PEFT-TRL-LLMs/python_files/sft_example.py", line 201, in <module>
+    trainer.train()
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/trl/trainer/sft_trainer.py", line 280, in train
+    output = super().train(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/transformers/trainer.py", line 1555, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/transformers/trainer.py", line 1922, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/transformers/trainer.py", line 2282, in _maybe_log_save_evaluate
+    self._save_checkpoint(model, trial, metrics=metrics)
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/transformers/trainer.py", line 2350, in _save_checkpoint
+    self.save_model(output_dir, _internal_call=True)
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/transformers/trainer.py", line 2843, in save_model
+    self._save(output_dir)
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/transformers/trainer.py", line 2901, in _save
+    self.model.save_pretrained(
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/peft/peft_model.py", line 228, in save_pretrained
+    safe_save_file(
+  File "/exports/eddie/scratch/s1808795/PEFT-TRL-LLMs/venv/lib/python3.11/site-packages/safetensors/torch.py", line 281, in save_file
+    serialize_file(_flatten(tensors), filename, metadata=metadata)
+safetensors_rust.SafetensorError: Error while serializing: IoError(Os { code: 122, kind: FilesystemQuotaExceeded, message: "Disk quota exceeded" })
+{'loss': 1.4358, 'learning_rate': 6.545084971874738e-05, 'epoch': 0.52}

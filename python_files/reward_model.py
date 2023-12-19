@@ -82,4 +82,9 @@ trainer = RewardTrainer(model=model,
                         )
 trainer.train()
 
-trainer.save_model("~/git/PEFT-TRL-LLMs/rm_model")
+access_token_read = "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"
+access_token_write = "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"
+login(token = access_token_write)
+
+trainer.push_to_hub("guoyu-zhang/reward_model")
+
